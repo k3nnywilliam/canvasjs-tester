@@ -4,6 +4,7 @@ function loadCanvasJS(json_data) {
   document.body.appendChild(script);
   // Construct options with R's json data
   const destructuredArray = json_data.map(({x, y}) => ({x, y}));
+  let chart_title = "Test 500,000 data points";
   
   script.onload = function() {
     //Better to pass options first
@@ -11,10 +12,14 @@ function loadCanvasJS(json_data) {
       zoomEnabled: true,
       animationEnabled: true,
       title: {
-        text: 'Test Chart'
+        text: chart_title
       },
       axisY: {
+        title: "Y",
         lineThickness: 1
+      },
+      axisX: {
+        title: "X"
       },
       data: [{
         type: 'line',

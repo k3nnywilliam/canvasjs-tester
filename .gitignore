@@ -1,0 +1,6 @@
+.DS_Store
+.Rproj.user/
+.Rprofile
+renv
+*.Rhistory
+*.Rproj
